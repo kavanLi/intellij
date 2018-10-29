@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <title>New Look</title>
+    <meta name="author" content="New Look">
+    <meta name="description" content="New Look">
+
+    <link type="text/css" rel="stylesheet" media="screen" href="src/css/normalize.min.css"/>
+    <link type="text/css" rel="stylesheet" media="screen" href="src/css/newlook_style.css"/>
+</head>
+
+<body>
+
+<div class="newlook-wrapper">
+    <div class="newlook-container">
+        <div class="container-logo"><img src="src/images/logo_w.png"></div>
+        <div class="container-title">
+            <div class="title-text title-bag">我的礼袋</div>
+        </div>
+
+        <div id="bagLoading" class="container-bag-loading">
+            <div class="loading-title">数据加载中...</div>
+        </div>
+
+        <div id="bagEmpty" class="container-bag-empty">
+            <div class="empty-title">礼袋里还没有礼物哦～</div>
+            <div id="emptyBackBtn" class="empty-back-btn">去抽奖</div>
+        </div>
+
+        <div id="bagList" class="container-bag-list">
+        </div>
+
+        <div id="bagModal" class="bag-modal">
+            <div class="bag-modal-content">
+                <div class="modal-close"></div>
+                <div class="modal-title">恭喜获得<span id="bagName"></span></div>
+                <div class="modal-desc">请凭此券到店内领取<br/>领奖规则请见活动细则</div>
+                <div id="bagImg" class="modal-img"></div>
+                <div id="confirmBtn" class="modal-confirm-btn">领奖后核销</div>
+                <div class="modal-comments">*领到奖品后，由店员点击核销</div>
+
+                <div id="confirmCover" class="modal-confirm">
+                    <div class="modal-close2"></div>
+                    <div id="destroyBtn" class="modal-destroy-btn">确认核销</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="src/js/jquery-1.10.1.min.js"></script>
+<script src="src/js/main.js"></script>
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        $.fn.newlookMybag({
+            host: '127.0.0.1',
+            port: '13479',
+            path: '/',
+            project: '/libra',
+            openingCode: 'nl7mokzukhwhY1NNCP', //{openingCode}
+            // uid: '84be504f0002605c0000000459731a13',
+        });
+
+    });
+</script>
+
+</body>
+</html>

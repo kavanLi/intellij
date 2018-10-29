@@ -8,3 +8,10 @@
 */target
 */app/target/
 */*/target/
+*/.classpath
+*/.project
+ffc/.settings/org.eclipse.core.resources.prefs
+*/.settings/
+*/*/.idea
+*/*/*/.idea/
+*/*/*/*/target/
