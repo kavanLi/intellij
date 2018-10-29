@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gcbi.damo.rpt.AnnotationTransactionMapper">
+
+    <resultMap id="annotationmap" type="com.gcbi.damo.rpt.eo.AnnotationTransactionEo">
+        <id property="id" column="id"/>
+        <result property="relId" column="rel_id"/>
+        <result property="userId" column="user_id"/>
+        <result property="batchId" column="batch_id"/>
+        <result property="label" column="label"/>
+        <result property="insertDate" column="insert_date"></result>
+    </resultMap>
+
+    <select id="findone" parameterType="com.gcbi.damo.rpt.eo.AnnotationTransactionEo" resultMap="annotationmap">
+        select * from annotation_transaction where user_id=#{userId} and batch_id=#{batchId} and rel_id=#{relId}
+    </select>
+
+    <insert id="addannotation" parameterType="com.gcbi.damo.rpt.eo.AnnotationTransactionEo">
+        insert into annotation_transaction (id, rel_id ,user_id,batch_id, label,insert_date,sub_type
+        )
+        values (#{id}, #{relId} ,#{userId},#{batchId},#{label},#{insertDate},#{subType}
+        )
+    </insert>
+
+    <update id="updateannotation" parameterType="com.gcbi.damo.rpt.eo.AnnotationTransactionEo">
+        UPDATE annotation_transaction SET
+        label=#{label}
+        WHERE user_id=#{userId} and batch_id=#{batchId} and rel_id=#{relId}
+    </update>
+
+</mapper>  

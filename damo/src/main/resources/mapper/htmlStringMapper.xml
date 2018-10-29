@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gcbi.damo.rpt.HtmlStringMapper">
+    <!--     <if test="searchName != null ">
+                <![CDATA[ where  a.name like '%${searchName}%'
+                or a.loginName like '%${searchName}%']]>
+            </if>
+        -->
+
+    <resultMap id="HtmlStringmap" type="com.gcbi.damo.rpt.eo.HtmlStringEo">
+        <id property="id" column="id"/>
+        <result property="relId" column="rel_id"/>
+        <result property="html" column="html"/>
+        <result property="relType" column="rel_type"/>
+        <result property="subType" column="sub_type"/>
+        <result property="translation" column="translation"/>
+        <result property="userId" column="user_id"/>
+        <result property="batchId" column="batch_id"/>
+        <result property="label" column="label"/>
+        <result property="relTypeTranslation" column="rel_type_translation"/>
+    </resultMap>
+
+    <select id="findByUserIdAndBatchId" parameterType="com.gcbi.damo.domain.QueryParameters" resultMap="HtmlStringmap">
+        <!-- SELECT * FROM `html_string` hs
+        left  JOIN  annotation a
+     ON ( hs.batch_id = a.batch_id and hs.user_id=#{userId}
+             and
+             hs.rel_id=a.rel_id)
+             where
+             hs.batch_id = #{batchId} -->
+
+        SELECT * FROM `html_string` hs where hs.user_id=#{userId}
+        and hs.batch_id = #{batchId}
+
+        <!-- <if test="islabel == null">
+            and a.label is not null;
+        </if> -->
+        <if test="islabel != null and islabel==false">
+            and hs.label =0;
+        </if>
+        <if test="islabel != null and islabel==true">
+            and hs.label =1;
+        </if>
+        <if test="startNum !=null and pageSize !=null">
+            limit #{startNum},#{pageSize}
+        </if>
+
+
+    </select>
+
+
+    <select id="findAllBatchId" resultType="java.lang.Long" parameterType="java.lang.Long">
+        SELECT Distinct batch_id FROM `html_string` where user_id=#{userId}
+    </select>
+
+    <select id="size" resultType="java.lang.Integer" parameterType="com.gcbi.damo.domain.QueryParameters">
+        <!--  SELECT count(1) FROM `html_string` hs left  JOIN  annotation a
+              ON ( hs.batch_id = a.batch_id and hs.user_id=#{userId}
+                      and
+                      hs.rel_id=a.rel_id)
+                      where
+                      hs.batch_id = #{batchId} -->
+
+        SELECT * FROM `html_string` hs where hs.user_id=#{userId}
+        and hs.batch_id = #{batchId}
+
+        <if test="islabel != null and islabel==false">
+            and hs.label =0
+        </if>
+        <if test="islabel != null and islabel==true">
+            and hs.label =1
+        </if>
+    </select>
+
+
+    <update id="updateHtmlString" parameterType="com.gcbi.damo.rpt.eo.HtmlStringEo">
+        update `html_string` set label=#{label},sub_type=#{subType} where id=#{id}
+    </update>
+
+    <select id="selectById" resultMap="HtmlStringmap" parameterType="java.lang.Long">
+        Select * from `html_string` where id=#{htmlId}
+    </select>
+
+    <select id="count" resultType="java.lang.Integer" parameterType="com.gcbi.damo.rpt.eo.HtmlStringEo">
+        select count(1) from `html_string` where user_id=#{userId} and batch_id = #{batchId};
+    </select>
+
+
+    <insert id="addSource" parameterType="com.gcbi.damo.domain.AddResouce">
+        insert into `html_string`(source_id, html, rel_type, rel_type_translation, translation, batch_id, user_id)
+        SELECT source_id, html, rel_type, rel_type_translation, translation, batch_id, #{userId} as user_id
+        FROM html_pool
+        where epoch_id = #{epochId} and batch_id=#{batchId};
+    </insert>
+
+</mapper>  

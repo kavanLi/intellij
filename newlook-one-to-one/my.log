@@ -1,0 +1,144 @@
+2018-02-03 21:07:43.459  INFO 8948 --- [main] c.e.n.NewlookOneToOneApplication         : Starting NewlookOneToOneApplication on DESKTOP-4JNEASV with PID 8948 (C:\workspace\intellij\newlook-one-to-one\target\classes started by Ritchie in C:\workspace\intellij\newlook-one-to-one)
+2018-02-03 21:07:43.465  INFO 8948 --- [main] c.e.n.NewlookOneToOneApplication         : No active profile set, falling back to default profiles: default
+2018-02-03 21:07:43.583  INFO 8948 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2b546384: startup date [Sat Feb 03 21:07:43 SGT 2018]; root of context hierarchy
+2018-02-03 21:07:44.938  INFO 8948 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$b5e9577d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-02-03 21:07:45.353  INFO 8948 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2018-02-03 21:07:45.366  INFO 8948 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-02-03 21:07:45.367  INFO 8948 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.27
+2018-02-03 21:07:45.467  INFO 8948 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-02-03 21:07:45.468  INFO 8948 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1890 ms
+2018-02-03 21:07:45.597  INFO 8948 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-02-03 21:07:45.601  INFO 8948 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-02-03 21:07:45.602  INFO 8948 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-02-03 21:07:45.603  INFO 8948 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-02-03 21:07:45.603  INFO 8948 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-02-03 21:07:45.902  INFO 8948 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-02-03 21:07:45.913  INFO 8948 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-02-03 21:07:45.973  INFO 8948 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2018-02-03 21:07:45.975  INFO 8948 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2018-02-03 21:07:45.976  INFO 8948 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2018-02-03 21:07:46.014  INFO 8948 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-02-03 21:07:46.056 DEBUG 8948 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration boolean -> org.hibernate.type.BooleanType@7c2312fa
+2018-02-03 21:07:46.056 DEBUG 8948 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration boolean -> org.hibernate.type.BooleanType@7c2312fa
+2018-02-03 21:07:46.057 DEBUG 8948 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Boolean -> org.hibernate.type.BooleanType@7c2312fa
+2018-02-03 21:07:46.057 DEBUG 8948 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration numeric_boolean -> org.hibernate.type.NumericBooleanType@2dddc1b9
+2018-02-03 21:07:46.059 DEBUG 8948 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration true_false -> org.hibernate.type.TrueFalseType@1fcf9739
+2018-02-03 21:07:46.060 DEBUG 8948 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration yes_no -> org.hibernate.type.YesNoType@5bcb04cb
+2018-02-03 21:07:46.061 DEBUG 8948 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration byte -> org.hibernate.type.ByteType@3fd2322d
+2018-02-03 21:07:46.061 DEBUG 8948 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration byte -> org.hibernate.type.ByteType@3fd2322d
+2018-02-03 21:07:46.062 DEBUG 8948 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Byte -> org.hibernate.type.ByteType@3fd2322d
+2018-02-03 21:07:46.062 DEBUG 8948 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration character -> org.hibernate.type.CharacterType@ab20d7c
+2018-02-03 21:07:46.063 DEBUG 8948 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration char -> org.hibernate.type.CharacterType@ab20d7c
+2018-02-03 21:07:46.063 DEBUG 8948 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Character -> org.hibernate.type.CharacterType@ab20d7c
+2018-02-03 21:07:46.065 DEBUG 8948 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration short -> org.hibernate.type.ShortType@e3994ef
+2018-02-03 21:07:46.066 DEBUG 8948 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration short -> org.hibernate.type.ShortType@e3994ef
+2018-02-03 21:07:46.066 DEBUG 8948 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Short -> org.hibernate.type.ShortType@e3994ef
+2018-02-03 21:07:46.067 DEBUG 8948 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration integer -> org.hibernate.type.IntegerType@70101687
+2018-02-03 21:07:46.067 DEBUG 8948 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration int -> org.hibernate.type.IntegerType@70101687
+2018-02-03 21:07:46.067 DEBUG 8948 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Integer -> org.hibernate.type.IntegerType@70101687
+2018-02-03 21:07:46.069 DEBUG 8948 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration long -> org.hibernate.type.LongType@4d7aaca2
+2018-02-03 21:07:46.069 DEBUG 8948 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration long -> org.hibernate.type.LongType@4d7aaca2
+2018-02-03 21:07:46.069 DEBUG 8948 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Long -> org.hibernate.type.LongType@4d7aaca2
+2018-02-03 21:07:46.070 DEBUG 8948 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration float -> org.hibernate.type.FloatType@26a262d6
+2018-02-03 21:07:46.071 DEBUG 8948 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration float -> org.hibernate.type.FloatType@26a262d6
+2018-02-03 21:07:46.071 DEBUG 8948 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Float -> org.hibernate.type.FloatType@26a262d6
+2018-02-03 21:07:46.072 DEBUG 8948 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration double -> org.hibernate.type.DoubleType@7d070ef5
+2018-02-03 21:07:46.073 DEBUG 8948 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration double -> org.hibernate.type.DoubleType@7d070ef5
+2018-02-03 21:07:46.073 DEBUG 8948 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Double -> org.hibernate.type.DoubleType@7d070ef5
+2018-02-03 21:07:46.074 DEBUG 8948 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration big_decimal -> org.hibernate.type.BigDecimalType@1431267b
+2018-02-03 21:07:46.074 DEBUG 8948 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.math.BigDecimal -> org.hibernate.type.BigDecimalType@1431267b
+2018-02-03 21:07:46.075 DEBUG 8948 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration big_integer -> org.hibernate.type.BigIntegerType@67110f71
+2018-02-03 21:07:46.075 DEBUG 8948 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.math.BigInteger -> org.hibernate.type.BigIntegerType@67110f71
+2018-02-03 21:07:46.076 DEBUG 8948 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration string -> org.hibernate.type.StringType@44841b43
+2018-02-03 21:07:46.076 DEBUG 8948 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.String -> org.hibernate.type.StringType@44841b43
+2018-02-03 21:07:46.077 DEBUG 8948 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration nstring -> org.hibernate.type.StringNVarcharType@a137d7a
+2018-02-03 21:07:46.077 DEBUG 8948 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration ncharacter -> org.hibernate.type.CharacterNCharType@2264e43c
+2018-02-03 21:07:46.078 DEBUG 8948 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration url -> org.hibernate.type.UrlType@3f49e266
+2018-02-03 21:07:46.078 DEBUG 8948 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.net.URL -> org.hibernate.type.UrlType@3f49e266
+2018-02-03 21:07:46.080 DEBUG 8948 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration date -> org.hibernate.type.DateType@3ac8cf9b
+2018-02-03 21:07:46.081 DEBUG 8948 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Date -> org.hibernate.type.DateType@3ac8cf9b
+2018-02-03 21:07:46.082 DEBUG 8948 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration time -> org.hibernate.type.TimeType@15d0849
+2018-02-03 21:07:46.082 DEBUG 8948 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Time -> org.hibernate.type.TimeType@15d0849
+2018-02-03 21:07:46.084 DEBUG 8948 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration timestamp -> org.hibernate.type.TimestampType@4248e66b
+2018-02-03 21:07:46.084 DEBUG 8948 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Timestamp -> org.hibernate.type.TimestampType@4248e66b
+2018-02-03 21:07:46.084 DEBUG 8948 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Date -> org.hibernate.type.TimestampType@4248e66b
+2018-02-03 21:07:46.086 DEBUG 8948 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration dbtimestamp -> org.hibernate.type.DbTimestampType@167279d1
+2018-02-03 21:07:46.088 DEBUG 8948 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration calendar -> org.hibernate.type.CalendarType@bd1111a
+2018-02-03 21:07:46.088 DEBUG 8948 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Calendar -> org.hibernate.type.CalendarType@bd1111a
+2018-02-03 21:07:46.088 DEBUG 8948 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.GregorianCalendar -> org.hibernate.type.CalendarType@bd1111a
+2018-02-03 21:07:46.089 DEBUG 8948 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration calendar_date -> org.hibernate.type.CalendarDateType@64412d34
+2018-02-03 21:07:46.089 DEBUG 8948 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration locale -> org.hibernate.type.LocaleType@681e144
+2018-02-03 21:07:46.090 DEBUG 8948 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Locale -> org.hibernate.type.LocaleType@681e144
+2018-02-03 21:07:46.090 DEBUG 8948 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration currency -> org.hibernate.type.CurrencyType@64355120
+2018-02-03 21:07:46.090 DEBUG 8948 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Currency -> org.hibernate.type.CurrencyType@64355120
+2018-02-03 21:07:46.091 DEBUG 8948 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration timezone -> org.hibernate.type.TimeZoneType@6c1832aa
+2018-02-03 21:07:46.091 DEBUG 8948 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.TimeZone -> org.hibernate.type.TimeZoneType@6c1832aa
+2018-02-03 21:07:46.092 DEBUG 8948 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration class -> org.hibernate.type.ClassType@3b46dd8
+2018-02-03 21:07:46.092 DEBUG 8948 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Class -> org.hibernate.type.ClassType@3b46dd8
+2018-02-03 21:07:46.093 DEBUG 8948 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration uuid-binary -> org.hibernate.type.UUIDBinaryType@12010fd1
+2018-02-03 21:07:46.093 DEBUG 8948 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.UUID -> org.hibernate.type.UUIDBinaryType@12010fd1
+2018-02-03 21:07:46.094 DEBUG 8948 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration uuid-char -> org.hibernate.type.UUIDCharType@3971f0fe
+2018-02-03 21:07:46.095 DEBUG 8948 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration binary -> org.hibernate.type.BinaryType@3be4fcc0
+2018-02-03 21:07:46.095 DEBUG 8948 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration byte[] -> org.hibernate.type.BinaryType@3be4fcc0
+2018-02-03 21:07:46.095 DEBUG 8948 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration [B -> org.hibernate.type.BinaryType@3be4fcc0
+2018-02-03 21:07:46.096 DEBUG 8948 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration wrapper-binary -> org.hibernate.type.WrapperBinaryType@540b0448
+2018-02-03 21:07:46.096 DEBUG 8948 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration Byte[] -> org.hibernate.type.WrapperBinaryType@540b0448
+2018-02-03 21:07:46.096 DEBUG 8948 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration [Ljava.lang.Byte; -> org.hibernate.type.WrapperBinaryType@540b0448
+2018-02-03 21:07:46.097 DEBUG 8948 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration row_version -> org.hibernate.type.RowVersionType@537c8c7e
+2018-02-03 21:07:46.098 DEBUG 8948 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration image -> org.hibernate.type.ImageType@573284a5
+2018-02-03 21:07:46.099 DEBUG 8948 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration characters -> org.hibernate.type.CharArrayType@4a7a965d
+2018-02-03 21:07:46.100 DEBUG 8948 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration char[] -> org.hibernate.type.CharArrayType@4a7a965d
+2018-02-03 21:07:46.100 DEBUG 8948 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration [C -> org.hibernate.type.CharArrayType@4a7a965d
+2018-02-03 21:07:46.100 DEBUG 8948 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration wrapper-characters -> org.hibernate.type.CharacterArrayType@23b3aa8c
+2018-02-03 21:07:46.100 DEBUG 8948 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration [Ljava.lang.Character; -> org.hibernate.type.CharacterArrayType@23b3aa8c
+2018-02-03 21:07:46.101 DEBUG 8948 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration Character[] -> org.hibernate.type.CharacterArrayType@23b3aa8c
+2018-02-03 21:07:46.101 DEBUG 8948 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration text -> org.hibernate.type.TextType@35342d2f
+2018-02-03 21:07:46.102 DEBUG 8948 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration ntext -> org.hibernate.type.NTextType@1de9d54
+2018-02-03 21:07:46.104 DEBUG 8948 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration blob -> org.hibernate.type.BlobType@70e13fa
+2018-02-03 21:07:46.105 DEBUG 8948 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Blob -> org.hibernate.type.BlobType@70e13fa
+2018-02-03 21:07:46.105 DEBUG 8948 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_blob -> org.hibernate.type.MaterializedBlobType@28fd3dc1
+2018-02-03 21:07:46.109 DEBUG 8948 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration clob -> org.hibernate.type.ClobType@69e05f61
+2018-02-03 21:07:46.109 DEBUG 8948 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Clob -> org.hibernate.type.ClobType@69e05f61
+2018-02-03 21:07:46.112 DEBUG 8948 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration nclob -> org.hibernate.type.NClobType@4ca8dbfa
+2018-02-03 21:07:46.112 DEBUG 8948 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.NClob -> org.hibernate.type.NClobType@4ca8dbfa
+2018-02-03 21:07:46.113 DEBUG 8948 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_clob -> org.hibernate.type.MaterializedClobType@76f856a8
+2018-02-03 21:07:46.113 DEBUG 8948 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_nclob -> org.hibernate.type.MaterializedNClobType@1046498a
+2018-02-03 21:07:46.114 DEBUG 8948 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration serializable -> org.hibernate.type.SerializableType@19b047fe
+2018-02-03 21:07:46.117 DEBUG 8948 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration object -> org.hibernate.type.ObjectType@4f67e3df
+2018-02-03 21:07:46.117 DEBUG 8948 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Object -> org.hibernate.type.ObjectType@4f67e3df
+2018-02-03 21:07:46.118 DEBUG 8948 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_date -> org.hibernate.type.AdaptedImmutableType@6d2dc9d2
+2018-02-03 21:07:46.118 DEBUG 8948 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_time -> org.hibernate.type.AdaptedImmutableType@1da4b6b3
+2018-02-03 21:07:46.118 DEBUG 8948 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_timestamp -> org.hibernate.type.AdaptedImmutableType@b2f4ece
+2018-02-03 21:07:46.118 DEBUG 8948 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_dbtimestamp -> org.hibernate.type.AdaptedImmutableType@7e1f584d
+2018-02-03 21:07:46.118 DEBUG 8948 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_calendar -> org.hibernate.type.AdaptedImmutableType@7dff6d05
+2018-02-03 21:07:46.119 DEBUG 8948 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_calendar_date -> org.hibernate.type.AdaptedImmutableType@45d64d27
+2018-02-03 21:07:46.119 DEBUG 8948 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_binary -> org.hibernate.type.AdaptedImmutableType@34fe326d
+2018-02-03 21:07:46.119 DEBUG 8948 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_serializable -> org.hibernate.type.AdaptedImmutableType@30a7c98f
+2018-02-03 21:07:46.365  INFO 8948 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2018-02-03 21:07:46.558 TRACE 8948 --- [main] org.hibernate.type.TypeFactory           : Scoping types to session factory org.hibernate.internal.SessionFactoryImpl@118ffcfd
+2018-02-03 21:07:46.822  INFO 8948 --- [main] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2018-02-03 21:07:46.826 DEBUG 8948 --- [main] org.hibernate.SQL                        : drop table if exists coupon
+2018-02-03 21:07:47.152 DEBUG 8948 --- [main] org.hibernate.SQL                        : drop table if exists user_coupon
+2018-02-03 21:07:47.325 DEBUG 8948 --- [main] org.hibernate.SQL                        : create table coupon (id bigint not null auto_increment, name varchar(255) not null, primary key (id))
+2018-02-03 21:07:47.580 DEBUG 8948 --- [main] org.hibernate.SQL                        : create table user_coupon (id bigint not null auto_increment, coupon_name varchar(255) not null, enabled bit not null, user_id integer not null, primary key (id))
+2018-02-03 21:07:47.917  INFO 8948 --- [main] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2018-02-03 21:07:47.961  INFO 8948 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-02-03 21:07:48.474  INFO 8948 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2b546384: startup date [Sat Feb 03 21:07:43 SGT 2018]; root of context hierarchy
+2018-02-03 21:07:48.544  INFO 8948 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/coupon/update],methods=[PUT]}" onto public java.lang.String com.example.newlookonetoone.coupon.CouponController.update(com.example.newlookonetoone.coupon.Coupon)
+2018-02-03 21:07:48.545  INFO 8948 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/coupon/find],methods=[GET]}" onto public com.example.newlookonetoone.coupon.Coupon com.example.newlookonetoone.coupon.CouponController.find(java.lang.Long)
+2018-02-03 21:07:48.546  INFO 8948 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/coupon/findAll],methods=[GET]}" onto public java.lang.String com.example.newlookonetoone.coupon.CouponController.find()
+2018-02-03 21:07:48.547  INFO 8948 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/coupon/add],methods=[POST]}" onto public java.lang.String com.example.newlookonetoone.coupon.CouponController.save(com.example.newlookonetoone.coupon.Coupon)
+2018-02-03 21:07:48.547  INFO 8948 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/coupon/deleteAll],methods=[DELETE]}" onto public void com.example.newlookonetoone.coupon.CouponController.deleteAll()
+2018-02-03 21:07:48.548  INFO 8948 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/coupon/delete],methods=[DELETE]}" onto public void com.example.newlookonetoone.coupon.CouponController.deleteById(java.lang.Long)
+2018-02-03 21:07:48.551  INFO 8948 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/usercoupon/draw],methods=[POST]}" onto public com.example.newlookonetoone.userCoupon.UserCoupon com.example.newlookonetoone.userCoupon.UserCouponController.drawALottery(java.lang.Integer)
+2018-02-03 21:07:48.551  INFO 8948 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/usercoupon/use],methods=[PUT]}" onto public com.example.newlookonetoone.userCoupon.UserCoupon com.example.newlookonetoone.userCoupon.UserCouponController.useCoupon(java.lang.Integer)
+2018-02-03 21:07:48.554  INFO 8948 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-02-03 21:07:48.554  INFO 8948 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-02-03 21:07:48.586  INFO 8948 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-02-03 21:07:48.587  INFO 8948 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-02-03 21:07:48.624  INFO 8948 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-02-03 21:07:48.887  INFO 8948 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-02-03 21:07:48.974  INFO 8948 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2018-02-03 21:07:48.978  INFO 8948 --- [main] c.e.n.NewlookOneToOneApplication         : Started NewlookOneToOneApplication in 5.976 seconds (JVM running for 7.093)

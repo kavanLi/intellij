@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title th:text="${title}"></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="/css/main.css"/>
+</head>
+<body>
+<div class="page-content">
+    <h1 th:text="|Hello ${name}!|"></h1>
+    <h2 th:text="|Welcome to ${title} application|"></h2>
+</div>
+</body>
+</html>
+<!-- Notice the use of th:text attributes in the template above. It is a thymeleaf attribute,
+which evaluates the expression present in the value and sets the result as the body of the host tag. -->
+
+<!--Also, If you pass your name in the request parameter - http://localhost:8080?name=Rajeev,
+then the app will greet you with your name instead of displaying Hello Guest.-->

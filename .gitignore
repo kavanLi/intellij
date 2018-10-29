@@ -1,0 +1,10 @@
+*.iml
+*/.idea/
+*/.gitignore
+*/mvnw
+*/mvnw.cmd
+*/.mvn
+*/.svn
+*/target
+*/app/target/
+*/*/target/

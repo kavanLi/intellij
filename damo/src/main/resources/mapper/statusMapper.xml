@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gcbi.damo.rpt.StatusMapper">
+
+    <resultMap id="annotationmap" type="com.gcbi.damo.rpt.eo.StatusEo">
+        <result property="batchId" column="current_batch_id"/>
+        <result property="epochId" column="current_epoch_id"/>
+    </resultMap>
+
+    <select id="findone" resultMap="annotationmap">
+        select * from status;
+    </select>
+
+
+    <update id="updateStatus" parameterType="com.gcbi.damo.rpt.eo.StatusEo">
+        UPDATE status SET
+        current_batch_id=#{batchId},
+        current_epoch_id=#{epochId};
+
+    </update>
+
+</mapper>  

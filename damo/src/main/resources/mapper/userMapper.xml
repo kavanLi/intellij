@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gcbi.damo.rpt.UserMapper">
+
+    <resultMap id="usermap" type="com.gcbi.damo.rpt.eo.UserEo">
+        <id property="id" column="id"/>
+        <result property="memberId" column="member_id"/>
+        <result property="userName" column="user_name"/>
+        <result property="remark" column="remark"/>
+    </resultMap>
+
+    <select id="findOneByMemberId" parameterType="java.lang.String" resultMap="usermap">
+        select * from user where member_id=#{memberId} ;
+    </select>
+
+    <insert id="addUserInfo" parameterType="com.gcbi.damo.rpt.eo.UserEo">
+        insert into user (id, user_name ,member_id,remark
+        )
+        values (#{id}, #{userName} ,#{memberId},#{remark}
+        )
+    </insert>
+
+    <update id="updateUserInfo" parameterType="com.gcbi.damo.rpt.eo.UserEo">
+        UPDATE user SET
+        user_name= #{userName},
+        remark=#{remark}
+        WHERE member_id= #{memberId}
+    </update>
+
+</mapper>  

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="ehcache.xsd"
+         updateCheck="true"
+         monitoring="autodetect"
+         dynamicConfig="true">
+    <!--maxBytesLocalHeap="250M">-->
+
+    <diskStore path="java.io.tmpdir"/>
+
+    <defaultCache maxElementsInMemory="10000"
+                  eternal="false"
+                  timeToIdleSeconds="60"
+                  timeToLiveSeconds="300"
+                  overflowToDisk="false"
+                  maxElementsOnDisk="1000000"
+                  diskPersistent="false"
+                  diskExpiryThreadIntervalSeconds="120"/>
+
+    <!--<cache name="bama.common.dictionary"-->
+    <!--maxElementsInMemory="10000"-->
+    <!--eternal="true"/>-->
+
+    <!--<cache name="bama.common.brands"-->
+    <!--maxElementsInMemory="10000"-->
+    <!--eternal="true"-->
+    <!--timeToIdleSeconds="60"-->
+    <!--timeToLiveSeconds="120"-->
+    <!--memoryStoreEvictionPolicy="LFU"/>-->
+
+</ehcache>

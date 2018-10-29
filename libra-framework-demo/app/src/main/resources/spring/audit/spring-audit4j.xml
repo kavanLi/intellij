@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/aop
+       http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <bean id="metaData" class="com.philips.h2h.bama.platform.audit.audit4j.DefaultAuditMetaData"/>
+
+    <bean id="auditAspect" class="org.audit4j.integration.spring.AuditAspect"/>
+    <aop:aspectj-autoproxy>
+        <aop:include name="auditAspect"/>
+    </aop:aspectj-autoproxy>
+
+
+    <bean id="layout" class="org.audit4j.core.layout.SimpleLayout"/>
+
+    <bean id="consoleAuditHandler" class="org.audit4j.core.handler.ConsoleAuditHandler"/>
+    <bean id="databaseAuditHandler" class="org.audit4j.handler.db.DatabaseAuditHandler">
+        <property name="embedded" value="false"/>
+        <property name="separate" value="true"/>
+        <property name="db_driver" value="${audit.db.driver.class}"/>
+        <property name="db_datasourceClass" value="${audit.db.datasource.class}"/>
+        <property name="db_url" value="${audit.db.connection.url}"/>
+        <property name="db_user" value="${audit.db.connection.username}"/>
+        <property name="db_password" value="${audit.db.connection.password}"/>
+    </bean>
+    <bean id="auditConfig" class="org.audit4j.integration.spring.SpringAudit4jConfig">
+        <property name="layout" ref="layout"/>
+        <property name="metaData" ref="metaData"/>
+        <property name="handlers">
+            <list>
+                <!--<ref bean="consoleAuditHandler"/>-->
+                <ref bean="databaseAuditHandler"/>
+            </list>
+        </property>
+    </bean>
+
+</beans>

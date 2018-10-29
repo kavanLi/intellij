@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:jpa="http://www.springframework.org/schema/data/jpa"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+             http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+             http://www.springframework.org/schema/context
+             http://www.springframework.org/schema/context/spring-context-4.0.xsd
+             http://www.springframework.org/schema/data/jpa
+             http://www.springframework.org/schema/data/jpa/spring-jpa.xsd">
+
+    <context:annotation-config/>
+    <context:component-scan base-package="com.philips.h2h.bama"/>
+
+    <!--<jpa:repositories base-package="com.philips.h2h.bama.app.repository"/>-->
+
+    <bean id="springPropertiesUtil" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="locations">
+            <list>
+                <value>classpath:spring/dal/jdbc.properties</value>
+                <!--<value>classpath:spring/dal/spy.properties</value>-->
+                <value>classpath:spring/dal/hibernate.cfg.properties</value>
+
+                <value>classpath:appconfig/setting.properties</value>
+                <value>classpath:appconfig/application.properties</value>
+            </list>
+        </property>
+    </bean>
+
+    <!-- common -->
+    <import resource="spring/common/spring-cache.xml"/>
+    <!--<import resource="spring/common/spring-bean-validation.xml"/>-->
+
+    <!-- module -->
+    <import resource="spring/dal/spring-dal.xml"/>
+
+</beans>

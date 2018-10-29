@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="true" scanPeriod="60 seconds" debug="false">
+    <contextName>logback</contextName>
+    <property name="log.path" value="/var/log"/>
+    <!--输出到控制台-->
+    <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+        <!-- <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+             <level>ERROR</level>
+         </filter>-->
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} %contextName [%thread] %highlight(%-5level) %cyan(%logger{36}) - %msg %n</pattern>
+        </encoder>
+    </appender>
+
+    <!--输出到文件-->
+    <appender name="file" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${log.path}/logback.%d{yyyy-MM-dd}.log</fileNamePattern>
+        </rollingPolicy>
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} %contextName [%thread] %-5level %logger{36} - %msg %n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- 自定义的log输出到单独的文件 -->
+    <appender name="daoAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${log.path}/my_logback.%d{yyyy-MM-dd}.log</fileNamePattern>
+        </rollingPolicy>
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} %contextName [%thread] %-5level %logger{36} - %msg %n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- http://tengj.top/2017/04/05/springboot7/ 详细见该网页 -->
+    <root level="info">
+        <!-- 设定了最基础的日志级别,同时在输出在控制台和文件中输出对应的是前两个appender -->
+        <appender-ref ref="console"/>
+        <appender-ref ref="file"/>
+    </root>
+
+    <!--
+         自定义log:
+         下面的logger会覆盖上面的logger标签的内容或者取代root的内容(针对的是userCoupon文件夹),所以需要加上第二句<appender-ref ref="console"/>
+         来让自定义的log同时打印在文件和控制台中.
+         对应的是第三个appender
+     -->
+    <logger name="com.example.newlookonetoone.userCoupon" level="debug" additivity="true">
+        <appender-ref ref="daoAppender"/>
+        <!-- 如果additivity(默认位true)设定为true, logger会向上级logger或者(没有上级logger)root传递打印信息。然后打印在控制台中就不需要
+             <appender-ref ref="console"/>这句代码.
+        -->
+        <!-- <appender-ref ref="console"/> -->
+    </logger>
+</configuration>

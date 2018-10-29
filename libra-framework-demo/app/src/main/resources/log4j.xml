@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration xmlns:log4j='http://jakarta.apache.org/log4j/'>
+
+    <!-- ================================================================= -->
+    <!--                       a console appender                          -->
+    <!-- ================================================================= -->
+    <appender name="console-log" class="org.apache.log4j.ConsoleAppender">
+        <param name="Threshold" value="info"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d %-5p (%F:%L) - %m%n"/>
+        </layout>
+    </appender>
+
+    <!-- ================================================================= -->
+    <!--                     a daily rolling file appender                 -->
+    <!-- ================================================================= -->
+    <appender name="daily-log" class="org.apache.log4j.DailyRollingFileAppender">
+        <param name="File" value="/logs/daily-log.log"/>
+        <param name="DatePattern" value="'.'yyyy-MM-dd'.log'"/>
+        <param name="Append" value="true"/>
+        <param name="Threshold" value="debug"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern"
+                   value="[%d{MMdd HH:mm:ss SSS\} %-5p] [%t] %c{3\} - %m%n"/>
+        </layout>
+    </appender>
+
+    <!-- ================================================================= -->
+    <!--                     a rolling file appender                       -->
+    <!-- ================================================================= -->
+    <appender name="rolling-log" class="org.apache.log4j.RollingFileAppender">
+        <param name="File" value="/logs/rolling-log.log"/>
+        <param name="MaxFileSize" value="2000KB"/>
+        <param name="Append" value="true"/>
+        <param name="Threshold" value="error"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d %-5p (%F:%L) - %m%n"/>
+        </layout>
+    </appender>
+
+    <!--<appender name="scheduler-log" class="com.philips.h2h.bama.platform.logger.appender.LoggingDBAppender">-->
+    <!--<param name="Threshold" value="debug" />-->
+    <!--<layout class="org.apache.log4j.PatternLayout">-->
+    <!--<param name="ConversionPattern" value="%d %-5p (%F:%L) - %m%n" />-->
+    <!--</layout>-->
+    <!--</appender>-->
+
+    <!--<category name="com.philips.h2h.bama.sample.scheduler">-->
+    <!--<level value="info" />-->
+    <!--<appender-ref ref="scheduler-log" />-->
+    <!--</category>-->
+
+    <!-- ================================================================= -->
+    <!--                     overall switch for logs                       -->
+    <!-- ================================================================= -->
+    <root>
+        <level value="info"/>
+        <appender-ref ref="console-log"/>
+        <appender-ref ref="daily-log"/>
+        <!--<appender-ref ref="rolling-log"/>-->
+    </root>
+
+</log4j:configuration>

@@ -1,0 +1,27 @@
+server:
+  port: 9040
+  #  enable gzip
+  compression.enabled: true
+  compression.mime-types: application/json,application/xml,text/html,text/css,application/javascript,text/xml,text/plain,font/ttf,font/x-woff
+logging:
+  path: /gcbi/logs/damo
+spring:
+  mvc:
+    view:
+      prefix: /WEB-INF/html/
+      suffix: .html
+  datasource:
+    url: jdbc:mysql://192.168.2.10:3306/annotation?useUnicode=true&amp;characterEncoding=utf8
+    username: devuser
+    password: 111111
+    driver-class-name: com.mysql.jdbc.Driver
+#mybatis
+mybatis:
+  mapper-locations: classpath*:mapper/*.xml
+  type-aliases-package: com.gcbi.damo.rpt.eo
+mapper:
+  mappers:
+  - tk.mybatis.springboot.util.MyMapper
+  not-empty: false
+  identity: MYSQL
+loginUrl: localhost:9040

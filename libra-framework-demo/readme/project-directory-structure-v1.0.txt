@@ -1,0 +1,140 @@
+BAMA1.0
++---app
+|   \---src
+|       +---main
+|       |   +---java
+|       |   |   \---com
+|       |   |       \---philips
+|       |   |           \---h2h
+|       |   |               \---bama
+|       |   |                   \---app
+|       |   |                       +---clinical
+|       |   |                       +---common // same structure as app but can be shared/reused for all modules
+|       |   |                       |   +---dal
+|       |   |                       |   |   +---dao
+|       |   |                       |   |   \---repository
+|       |   |                       |   +---domain
+|       |   |                       |   |   +---entity
+|       |   |                       |   |   \---model
+|       |   |                       |   +---exception
+|       |   |                       |   +---mvc
+|       |   |                       |   |   +---controller
+|       |   |                       |   |   +---model
+|       |   |                       |   |   \---view
+|       |   |                       |   +---service
+|       |   |                       |   \---util
+|       |   |                       +---identification // subsystem/module name
+|       |   |                       |   +---dal // DAL (data access layer)
+|       |   |                       |   |   +---dao // DAO interface
+|       |   |                       |   |   |   \---impl // DAO interface implementation
+|       |   |                       |   |   \---repository // Spring-Data-Jpa interface
+|       |   |                       |   |       \---impl // JPA interface implementation
+|       |   |                       |   +---domain // domain/entity/model layer
+|       |   |                       |   |   +---entity // domain entities
+|       |   |                       |   |   \---model // models, AKA DTO
+|       |   |                       |   +---exception // module exceptions
+|       |   |                       |   +---mvc // mvc artifacts place here
+|       |   |                       |   |   +---controller // REST controller
+|       |   |                       |   |   +---model // model used in MVC
+|       |   |                       |   |   \---view // view objects used in MVC
+|       |   |                       |   +---service // business service layer
+|       |   |                       |   |   +---atom // atom/base service interface
+|       |   |                       |   |   |   \---impl // atom service interface implementation
+|       |   |                       |   |   \---business // business service interface
+|       |   |                       |   |       \---impl // business service interface implementation
+|       |   |                       |   \---util // util/helper/constants...etc definition
+|       |   |                       +---sample
+|       |   |                       +---workflow
+|       |   +---resources
+|       |   |   +---appconfig // app level configurations, like properties placed here
+|       |   |   |   +---cache
+|       |   |   |   +---exception
+|       |   |   |   \---mapping
+|       |   |   +---bundle // resource bundles go here
+|       |   |   +---META-INF
+|       |   |   |   \---services
+|       |   |   \---spring // all spring functions/components go here
+|       |   |       +---aop
+|       |   |       +---common
+|       |   |       +---dal
+|       |   |       +---exception
+|       |   |       +---mvc
+|       |   |       \---web
+|       |   \---webapp // web/html artifacts placed here
+|       |       +---META-INF
+|       |       +---resources
+|       |       |   +---css // css files
+|       |       |   +---images // images
+|       |       |   \---js // javascripts/3rd parth libs
+|       |       \---WEB-INF
+|       |           +---jsp
+|       \---test
+|           +---java
+|           |   \---com
+|           |       \---philips
+|           |           \---h2h
+|           |               \---bama
+|           |                   +---app
+|           |                   |   \---sample
+|           |                   |       +---controller
+|           |                   |       \---service
+|           |                   \---sample
+|           |                       \---test
+|           +---resources
+\---platform
+    \---src
+        +---main
+        |   +---java
+        |   |   \---com
+        |   |       \---philips
+        |   |           \---h2h
+        |   |               \---bama
+        |   |                   \---platform
+        |   |                       +---audit
+        |   |                       |   \---audit4j
+        |   |                       +---cache
+        |   |                       +---code
+        |   |                       |   \---impl
+        |   |                       +---core
+        |   |                       |   +---dal
+        |   |                       |   |   +---dao
+        |   |                       |   |   \---repository
+        |   |                       |   +---domain
+        |   |                       |   |   +---entity
+        |   |                       |   |   \---model
+        |   |                       |   |       +---common
+        |   |                       |   |       \---converter
+        |   |                       |   +---exception
+        |   |                       |   +---orm
+        |   |                       |   |   \---hibernate
+        |   |                       |   +---query
+        |   |                       |   |   \---pagination
+        |   |                       |   +---spring
+        |   |                       |   |   \---rest
+        |   |                       |   |       +---error
+        |   |                       |   |       \---model
+        |   |                       |   +---test
+        |   |                       |   \---util
+        |   |                       |       \---querydsl
+        |   |                       +---file
+        |   |                       |   +---image
+        |   |                       |   |   \---thumbnailator
+        |   |                       |   +---model
+        |   |                       |   \---upload
+        |   |                       +---security
+        |   |                       |   +---authc
+        |   |                       |   |   \---credential
+        |   |                       |   +---authz
+        |   |                       |   +---domain
+        |   |                       |   +---entity
+        |   |                       |   +---enumeration
+        |   |                       |   +---exception
+        |   |                       |   +---realm
+        |   |                       |   \---util
+        |   |                       \---util
+        |   |                           \---constant
+        |   +---resources
+        |   \---webapp
+        \---test
+            +---java
+            \---resources
